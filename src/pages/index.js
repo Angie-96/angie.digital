@@ -1,21 +1,57 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useRef } from 'react'
+import Particles from 'react-particles-js'
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import Home from '../components/home'
+import Description from '../components/description'
+import Contact from '../components/contact'
+import { devices } from '../components/devices'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import Slide from '../components/slide'
+
+const ParticleOpt = {
+  particles: {
+    number: {
+      value: 120,
+      density: {
+        enable: true,
+        value_area: 700,
+      },
+    },
+  },
+}
+
+const ParticlesWrapper = styled.div`
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
+    display: none;
+  }
+`
+
+const IndexPage = props => {
+  const slide1Ref = useRef(null)
+  const slide2Ref = useRef(null)
+  const slide3Ref = useRef(null)
+
+  return (
+    <Layout>
+      <Slide localRef={slide1Ref} linkedRef={slide2Ref}>
+        <ParticlesWrapper>
+          <Particles params={ParticleOpt} />
+        </ParticlesWrapper>
+        <Home />
+      </Slide>
+      <Slide localRef={slide2Ref} linkedRef={slide3Ref}>
+        <Description />
+      </Slide>
+      <Slide localRef={slide3Ref} linkedRef={slide1Ref}>
+        <Contact />
+      </Slide>
+    </Layout>
+  )
+}
 
 export default IndexPage
