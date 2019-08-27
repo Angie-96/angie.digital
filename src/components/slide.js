@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import ArrowDown from './arrow'
+import Arrow from './arrow'
 import { devices } from './devices'
 
 const scrollToRef = ref => {
@@ -11,7 +11,7 @@ const move = keyframes`
     30% {transform: translateY(-10px);}
     100% {transform: translateY(-10px);}
 `
-const ButtonDown = styled.div`
+const ButtonArrow = styled.div`
   cursor: pointer;
   display: block;
   position: relative;
@@ -36,13 +36,13 @@ const ContentWrapper = styled.div`
   height: 100%;
 `
 
-const Slide = ({ localRef, linkedRef, children }) => {
+const Slide = ({ localRef, linkedRef, children, last = false }) => {
   return (
     <StyledDiv ref={localRef}>
       <ContentWrapper>{children}</ContentWrapper>
-      <ButtonDown onClick={() => scrollToRef(linkedRef)}>
-        <ArrowDown />
-      </ButtonDown>
+      <ButtonArrow onClick={() => scrollToRef(linkedRef)}>
+        <Arrow isArrowUp={last} />
+      </ButtonArrow>
     </StyledDiv>
   )
 }

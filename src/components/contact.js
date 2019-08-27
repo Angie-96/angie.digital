@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import linkedin from '../images/linkedin.png'
 import instagram from '../images/instagram.png'
+import github from '../images/github.png'
 import { devices } from './devices'
 
 const BackgroundSlide = styled.div`
@@ -36,7 +37,7 @@ const Email = styled.a`
   }
 `
 const Redes = styled.div`
-  width: 100px;
+  width: 150px;
   margin: 10% auto;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     margin-top: 40%;
@@ -83,6 +84,13 @@ function ThirdSlide() {
           rel="noopener noreferrer"
         >
           <Links src={instagram} alt="instagram"></Links>
+        </ALinks>
+        <ALinks
+          href="https://github.com/Angie-96"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Links src={github} alt="github"></Links>
         </ALinks>
       </Redes>
     </BackgroundSlide>

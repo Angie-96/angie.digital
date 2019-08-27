@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple portfolio with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -25,6 +25,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-particles-js": "^2.7.0",
+    "react-tooltip": "^3.10.0",
     "react-typography": "^0.16.19",
     "styled-components": "^4.3.2",
     "typography": "^0.16.19",

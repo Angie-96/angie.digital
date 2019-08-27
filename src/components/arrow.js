@@ -1,9 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import arrow from '../images/arrow3.png'
+import arrowDown from '../images/arrow3.png'
 
-function ArrowDown() {
-  return <img src={arrow} alt="arrow" />
+const ArrowDown = styled.img``
+
+const ArrowUp = styled.img`
+  transform: rotate(180deg);
+`
+
+function Arrow({ isArrowUp }) {
+  const ArrowComponent = isArrowUp ? ArrowUp : ArrowDown
+
+  return <ArrowComponent src={arrowDown} alt="arrow" />
 }
 
-export default ArrowDown
+export default Arrow

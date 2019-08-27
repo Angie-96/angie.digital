@@ -47,7 +47,7 @@ const IndexPage = props => {
       <Slide localRef={slide2Ref} linkedRef={slide3Ref}>
         <Description />
       </Slide>
-      <Slide localRef={slide3Ref} linkedRef={slide1Ref}>
+      <Slide localRef={slide3Ref} linkedRef={slide1Ref} last={true}>
         <Contact />
       </Slide>
     </Layout>
