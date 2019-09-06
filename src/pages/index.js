@@ -38,16 +38,25 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Slide localRef={slide1Ref} linkedRef={slide2Ref}>
+      <Slide
+        localRef={slide1Ref}
+        linkedRef={slide2Ref}
+        background="linear-gradient(#f98f95, #d9a4f3, #68d8f1)"
+      >
         <ParticlesWrapper>
           <Particles params={ParticleOpt} />
         </ParticlesWrapper>
         <Home />
       </Slide>
-      <Slide localRef={slide2Ref} linkedRef={slide3Ref}>
+      <Slide localRef={slide2Ref} linkedRef={slide3Ref} background="#eaebed">
         <Description />
       </Slide>
-      <Slide localRef={slide3Ref} linkedRef={slide1Ref} last={true}>
+      <Slide
+        localRef={slide3Ref}
+        linkedRef={slide1Ref}
+        last={true}
+        background="#ace9f7"
+      >
         <Contact />
       </Slide>
     </Layout>

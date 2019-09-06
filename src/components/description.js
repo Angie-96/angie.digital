@@ -3,10 +3,6 @@ import styled, { keyframes } from 'styled-components'
 import { devices } from './devices'
 import MappleSkills from './mappleSkills'
 
-const BackgroundSlide = styled.div`
-  height: 100vh;
-  background-color: #eaebed;
-`
 const TextDiv = styled.div`
   padding-top: 5%;
 `
@@ -97,7 +93,7 @@ const SkillsText = styled.h2`
 
 function SecondSlide() {
   return (
-    <BackgroundSlide>
+    <>
       <TextDiv>
         <DescriptionText>
           Hello, my name is <UnderlineDiv>Angie.</UnderlineDiv>
@@ -112,7 +108,7 @@ function SecondSlide() {
 
       <SkillsText>My Skills:</SkillsText>
       <MappleSkills />
-    </BackgroundSlide>
+    </>
   )
 }
 

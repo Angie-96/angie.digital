@@ -15,7 +15,6 @@ const ButtonArrow = styled.div`
   cursor: pointer;
   display: block;
   position: relative;
-  bottom: 70px;
   left: 48.2%;
   width: 64px;
   height: 64px;
@@ -28,17 +27,18 @@ const ButtonArrow = styled.div`
 `
 
 const StyledDiv = styled.div`
+  background: ${({ background }) => background};
   height: 100vh;
   width: auto;
 `
 
 const ContentWrapper = styled.div`
-  height: 100%;
+  height: 90%;
 `
 
-const Slide = ({ localRef, linkedRef, children, last = false }) => {
+const Slide = ({ localRef, linkedRef, children, background, last = false }) => {
   return (
-    <StyledDiv ref={localRef}>
+    <StyledDiv ref={localRef} background={background}>
       <ContentWrapper>{children}</ContentWrapper>
       <ButtonArrow onClick={() => scrollToRef(linkedRef)}>
         <Arrow isArrowUp={last} />

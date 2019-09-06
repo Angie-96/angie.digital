@@ -23,10 +23,7 @@ const Description = styled.h3`
     font-size: 18px;
   }
 `
-const FirstSlideWrapper = styled.div`
-  background: linear-gradient(#f98f95, #d9a4f3, #68d8f1);
-  height: 100vh;
-`
+
 export default () => {
   const data = useStaticQuery(graphql`
     query {
@@ -40,11 +37,11 @@ export default () => {
     }
   `)
   return (
-    <FirstSlideWrapper>
+    <>
       <Logo>
         <Img fluid={data.file.childImageSharp.fluid} />
       </Logo>
       <Description>Web Developer/ Designer</Description>
-    </FirstSlideWrapper>
+    </>
   )
 }

@@ -5,10 +5,6 @@ import instagram from '../images/instagram.png'
 import github from '../images/github.png'
 import { devices } from './devices'
 
-const BackgroundSlide = styled.div`
-  height: 100vh;
-  background-color: #ace9f7;
-`
 const Contact = styled.h1`
   display: block;
   text-align: center;
@@ -38,9 +34,9 @@ const Email = styled.a`
 `
 const Redes = styled.div`
   width: 150px;
-  margin: 10% auto;
+  margin: 7% auto;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
-    margin-top: 40%;
+    margin-top: 30%;
   }
   @media ${devices.s9Mobile} {
     margin-top: 50%;
@@ -65,7 +61,7 @@ const ALinks = styled.a`
 `
 function ThirdSlide() {
   return (
-    <BackgroundSlide>
+    <>
       <Contact>Contact:</Contact>
       <EmailWrapper>
         <Email href="mailto:hi@angie.digital">hi@angie.digital</Email>
@@ -93,7 +89,7 @@ function ThirdSlide() {
           <Links src={github} alt="github"></Links>
         </ALinks>
       </Redes>
-    </BackgroundSlide>
+    </>
   )
 }
 
