@@ -50,13 +50,19 @@ const SkillWrapper = styled.div`
   width: 80px;
 `
 
+const StyledTooltip = styled(ReactTooltip)`
+  @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
+    display: none;
+  }
+`
+
 const MappleSkills = () => {
   return (
     <div>
       <SkillsGrid>
         <SkillWrapper>
           <Skills data-tip="HTML5" src={htmlImg} alt="html5"></Skills>
-          <ReactTooltip place="top" type="dark" effect="float" />
+          <StyledTooltip place="top" type="dark" effect="float" />
         </SkillWrapper>
         <SkillWrapper>
           <Skills data-tip="CSS3" src={cssImg} alt="css3"></Skills>
