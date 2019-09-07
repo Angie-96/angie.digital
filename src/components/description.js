@@ -4,15 +4,18 @@ import { devices } from './devices'
 import MappleSkills from './mappleSkills'
 
 const TextDiv = styled.div`
-  padding-top: 5%;
+  padding-top: 8%;
 `
 
 const UnderlinedGradient = keyframes`
   0%{
     transform: translate3d(0%, 0%, 0);
   }
-  100%{
+  50%{
     transform: translate3d(-75%, 0%, 0);
+  }
+  100%{
+    transform: translate3d(0%, 0%, 0);
   }
 `
 
@@ -22,7 +25,7 @@ const DescriptionText = styled.p`
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.15;
-  width: 850px;
+  width: 880px;
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
@@ -41,7 +44,9 @@ const colors = {
   black: '#141414',
 }
 
-const UnderlineDiv = styled.div`
+const Underline = styled.em`
+  padding-right: 5px;
+  padding-bottom: 2px;
   color: transparent;
   display: inline-block;
   overflow: hidden;
@@ -69,6 +74,7 @@ const UnderlineDiv = styled.div`
     will-change: transform;
     z-index: -5;
   }
+
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     &:after {
       background: none;
@@ -79,7 +85,7 @@ const SkillsText = styled.h2`
   width: 670px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 90px;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     width: 50%;
     font-size: 18px;
@@ -96,13 +102,13 @@ function SecondSlide() {
     <>
       <TextDiv>
         <DescriptionText>
-          Hello, my name is <UnderlineDiv>Angie.</UnderlineDiv>
+          Hello, my name is <Underline>Angie.</Underline>
         </DescriptionText>
         <DescriptionText>
-          I am a <UnderlineDiv>Jr. Front End Developer / Designer</UnderlineDiv>
+          I am a <Underline>Jr. Front End Developer / Designer</Underline>
         </DescriptionText>
         <DescriptionText>
-          living in <UnderlineDiv>Córdoba, AR.</UnderlineDiv>
+          living in <Underline>Córdoba, AR.</Underline>
         </DescriptionText>
       </TextDiv>
 
