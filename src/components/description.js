@@ -86,6 +86,7 @@ const SkillsText = styled.h2`
   margin: 0 auto;
   text-align: center;
   padding-top: 90px;
+  font-size: 20px;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     width: 50%;
     font-size: 18px;

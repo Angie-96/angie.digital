@@ -9,8 +9,8 @@ const Contact = styled.h1`
   display: block;
   text-align: center;
   padding-top: 20%;
+  font-size: 25px;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
-    font-size: 25px;
     font-weight: 400;
     margin: 0 auto;
     padding-top: 40%;
@@ -27,6 +27,7 @@ const EmailWrapper = styled.div`
 const Email = styled.a`
   color: #f98f95;
   font-size: 60px;
+  text-decoration: none;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     font-size: 30px;
     margin: 0 auto;

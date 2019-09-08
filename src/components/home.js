@@ -17,7 +17,8 @@ const Logo = styled.div`
 const Description = styled.h3`
   font-weight: 400;
   position: relative;
-  top: 40%;
+  top: 41%;
+  font-size: 20px;
   text-align: center;
   @media screen ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
     font-size: 18px;
