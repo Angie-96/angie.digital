@@ -30,6 +30,7 @@ const StyledDiv = styled.div`
   background: ${({ background }) => background};
   height: 100vh;
   width: auto;
+  scroll-snap-align: start;
 `
 
 const ContentWrapper = styled.div`

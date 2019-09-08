@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     color: rgb(255, 255, 255);
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
   }
 
   h1,
