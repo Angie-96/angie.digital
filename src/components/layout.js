@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
 
 const MainWrapper = styled.div`
   margin: 0 auto;
@@ -8,6 +9,7 @@ const MainWrapper = styled.div`
 `
 
 const GlobalStyle = createGlobalStyle`
+  ${reset}
   html, body {
     color: rgb(255, 255, 255);
     scroll-behavior: smooth;

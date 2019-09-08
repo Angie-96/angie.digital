@@ -11,8 +11,10 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,12 +43,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
 
