@@ -24,11 +24,11 @@ const SkillsGrid = styled.div`
     grid-column-gap: 10px;
     grid-row-gap: 5px;
     width: 250px;
-    margin: 60px auto;
+    margin: 40px auto;
   }
 
   @media ${devices.s9Mobile} {
-    margin: 10% auto;
+    margin: 6% auto;
   }
 `
 

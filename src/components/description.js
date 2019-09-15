@@ -91,10 +91,10 @@ const SkillsText = styled.h2`
     width: 50%;
     font-size: 18px;
     font-weight: 400;
-    padding-top: 20%;
+    padding-top: 10%;
   }
   @media ${devices.s9Mobile} {
-    padding-top: 40%;
+    padding-top: 25%;
   }
 `
 

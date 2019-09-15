@@ -42,7 +42,7 @@ export default () => {
       <Logo>
         <Img fluid={data.file.childImageSharp.fluid} />
       </Logo>
-      <Description>Web Developer/ Designer</Description>
+      <Description>Graphic Designer & Jr Front End Developer</Description>
     </>
   )
 }

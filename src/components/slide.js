@@ -21,7 +21,7 @@ const ButtonArrow = styled.div`
   animation: ${move} 2s infinite alternate;
 
   @media screen ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
-    transform: scale(0.7);
+    width: 30px;
     left: 41%;
   }
 `

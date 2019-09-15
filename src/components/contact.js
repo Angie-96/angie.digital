@@ -63,7 +63,7 @@ const ALinks = styled.a`
 function ThirdSlide() {
   return (
     <>
-      <Contact>Contact:</Contact>
+      <Contact>Get in touch</Contact>
       <EmailWrapper>
         <Email href="mailto:hi@angie.digital">hi@angie.digital</Email>
       </EmailWrapper>
