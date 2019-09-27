@@ -1,8 +1,7 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { devices } from './devices'
+import logo from '../images/logotipo.png'
 
 const Logo = styled.div`
   position: relative;
@@ -26,21 +25,10 @@ const Description = styled.h3`
 `
 
 export default () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "logotipo.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 672) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <>
       <Logo>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <img src={logo} alt="Logotipo Angie Digital"></img>
       </Logo>
       <Description>Graphic Designer & Jr Front End Developer</Description>
     </>
