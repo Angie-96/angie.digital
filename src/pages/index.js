@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Particles from 'react-particles-js'
 import styled, { keyframes } from 'styled-components'
+import { devices } from '../components/devices'
 
 import Layout from '../components/layout'
 import Home from '../components/home'
@@ -123,9 +124,11 @@ const ParticleOpt = {
   retina_detect: true,
 }
 const ParticlesWrapper = styled.div`
-  height: 100%;
   position: absolute;
   width: 100%;
+  @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
+    display: none;
+  }
 `
 
 const MainAnimation = keyframes`
@@ -145,7 +148,7 @@ const DescriptionSlideWrapper = styled(BaseWrapper)`
 `
 
 const ContactSlideWrapper = styled(BaseWrapper)`
-  background: lightcoral; /*#68d8f1;*/
+  background: #f98f95; /*#68d8f1;*/
 `
 const IndexPage = props => {
   const slide1Ref = useRef(null)
