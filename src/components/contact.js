@@ -6,6 +6,10 @@ import github from '../images/github.png'
 import { devices } from './devices'
 
 const Contact = styled.h1`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: block;
   text-align: center;
   padding-top: 20%;
@@ -14,6 +18,7 @@ const Contact = styled.h1`
     font-weight: 400;
     margin: 0 auto;
     padding-top: 40%;
+    font-size: 20px;
   }
 `
 const EmailWrapper = styled.div`
@@ -25,7 +30,8 @@ const EmailWrapper = styled.div`
   }
 `
 const Email = styled.a`
-  color: #f98f95;
+  position: relative;
+  color: #b33580;
   font-size: 60px;
   text-decoration: none;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
@@ -34,6 +40,11 @@ const Email = styled.a`
   }
 `
 const Redes = styled.div`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
   width: 150px;
   margin: 7% auto;
   @media ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {

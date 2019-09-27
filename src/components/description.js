@@ -20,6 +20,10 @@ const UnderlinedGradient = keyframes`
 `
 
 const DescriptionText = styled.p`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #000;
   font-family: 'Roboto Slab';
   font-size: 2rem;
@@ -45,6 +49,10 @@ const colors = {
 }
 
 const Underline = styled.em`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding-right: 5px;
   padding-bottom: 2px;
   color: transparent;
@@ -82,6 +90,10 @@ const Underline = styled.em`
   }
 `
 const SkillsText = styled.h2`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   width: 670px;
   margin: 0 auto;
   text-align: center;
@@ -106,7 +118,8 @@ function SecondSlide() {
           Hello, my name is <Underline>Angie.</Underline>
         </DescriptionText>
         <DescriptionText>
-          I am a <Underline>Jr. Front End Developer / Designer</Underline>
+          I am a{' '}
+          <Underline>Graphic Designer & Jr Front End Developer</Underline>
         </DescriptionText>
         <DescriptionText>
           living in <Underline>Córdoba, AR.</Underline>

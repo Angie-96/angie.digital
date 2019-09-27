@@ -9,11 +9,23 @@ const Logo = styled.div`
   margin: 0 auto;
   width: 672px;
   @media screen ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
-    width: 80%;
+    width: auto;
+  }
+`
+
+const ResponsiveImg = styled.img`
+  @media screen ${devices.mobileS}, ${devices.mobileM}, ${devices.mobileL} {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
   }
 `
 
 const Description = styled.h3`
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-weight: 400;
   position: relative;
   top: 41%;
@@ -28,7 +40,7 @@ export default () => {
   return (
     <>
       <Logo>
-        <img src={logo} alt="Logotipo Angie Digital"></img>
+        <ResponsiveImg src={logo} alt="Logotipo Angie Digital"></ResponsiveImg>
       </Logo>
       <Description>Graphic Designer & Jr Front End Developer</Description>
     </>
