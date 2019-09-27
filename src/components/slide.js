@@ -26,8 +26,7 @@ const ButtonArrow = styled.div`
   }
 `
 
-const StyledDiv = styled.div`
-  background: ${({ background }) => background};
+export const BaseWrapper = styled.div`
   height: 100vh;
   width: auto;
   scroll-snap-align: start;
@@ -37,14 +36,22 @@ const ContentWrapper = styled.div`
   height: 90%;
 `
 
-const Slide = ({ localRef, linkedRef, children, background, last = false }) => {
+const Slide = ({
+  localRef,
+  linkedRef,
+  children,
+  customWrapper,
+  last = false,
+}) => {
+  const Wrapper = customWrapper || BaseWrapper
+
   return (
-    <StyledDiv ref={localRef} background={background}>
+    <Wrapper ref={localRef}>
       <ContentWrapper>{children}</ContentWrapper>
       <ButtonArrow onClick={() => scrollToRef(linkedRef)}>
         <Arrow isArrowUp={last} />
       </ButtonArrow>
-    </StyledDiv>
+    </Wrapper>
   )
 }
 
